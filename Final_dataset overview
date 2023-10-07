@@ -1,0 +1,12 @@
+The final_dataset.xlsx, is the source from which I extract the data from within the Chelsea_Analysis.ipynb. The data set needed to be cleaned and organised to ensure that dates with set in an ascending order. 
+After organising the dates, to an ascending order, I had to determine the winner of each game as the orginial dataset only contained the result of the game. To do so I researched how to make a 3 conditional IF
+statment, based on the following conditions: 
+
+Formula used in Column FTW(Full-Time Winner):
+=IF(E2>F2,C2, IF(F2>E2,D2, IF(E2=F2, "Draw")))
+- If the values for FTHG (Full-Time Home Goals) is greater (>) than FTAG (Full-Time Away Goals), than the outcome of the game will be the HomeTeam (derived from the column HomeTeam).
+- If the values for FTAG is greater (>) than FTHG , than the outcome of the game will be the AwayTeam (derived from the column AwayTeam)
+- If the vaules FTHG is equal (=) to FTAG, than the outcome of the game is a "Draw"
+
+Once, I was sataisfied with the formula and the output it was providing based on certain games it was then pasted down into the remaining cells as a value, as the formula of the cells affected the get requests
+made in Python. 
